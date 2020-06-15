@@ -5,7 +5,7 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
   this.actuator       = new Actuator;
 
   this.startTiles     = 2; // dydx What is this?
-    this.primes = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]; // 13 long
+    this.primes = [1, 2, 1, 1, 2, 1, 4, 1, 2, 1, 1, 2, 1]; // 13 long
 
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("restart", this.restart.bind(this));

@@ -5,7 +5,7 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
   this.actuator       = new Actuator;
 
   this.startTiles     = 2; // dydx What is this?
-    this.primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41]; // 13 long
+    this.primes = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]; // 13 long
 
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("restart", this.restart.bind(this));
@@ -167,8 +167,8 @@ GameManager.prototype.move = function (direction) {
           // Update the score
           self.score += merged.value;
 
-          // The mighty 1849 tile dydx
-          if (merged.value === 1849) self.won = true;
+          // The mighty 2048 tile dydx
+          if (merged.value === 2048) self.won = true;
         } else {
           self.moveTile(tile, positions.farthest);
         }
